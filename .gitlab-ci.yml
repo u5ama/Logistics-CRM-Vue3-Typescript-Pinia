@@ -1,0 +1,90 @@
+stages:
+  - build
+  - deploy
+
+build_production:
+  image: node:latest
+  stage: build
+  environment:
+    name: production
+  only:
+    - main
+  script:
+    # Install dependencies
+    - npm install
+    # Build App
+    - npm run build-only
+  artifacts:
+    paths:
+      # Build folder
+      - dist/
+    expire_in: 1 hour
+
+deploy_production:
+  image: python:latest
+  environment:
+    name: production
+  stage: deploy
+  only:
+    - tags
+  script:
+    - pip install awscli
+    - aws s3 sync ./dist s3://starbucks-frontend-production
+
+build_staging:
+  image: node:latest
+  stage: build
+  only:
+    - staging
+  environment:
+    name: staging
+  script:
+    # Install dependencies
+    - npm install
+    # Build App
+    - npm run staging-only
+  artifacts:
+    paths:
+      # Build folder
+      - dist/
+    expire_in: 1 hour
+
+deploy_staging:
+  image: python:latest
+  stage: deploy
+  environment:
+    name: staging
+  only:
+    - staging
+  script:
+    - pip install awscli
+    - aws s3 sync ./dist s3://starbucks-frontend-staging
+
+build_development:
+  image: node:latest
+  stage: build
+  environment:
+    name: development
+  only:
+    - development
+  script:
+    # Install dependencies
+    - npm install
+    # Build App
+    - npm run deployment-only
+  artifacts:
+    paths:
+      # Build folder
+      - dist/
+    expire_in: 1 hour
+
+deploy_development:
+  image: python:latest
+  stage: deploy
+  environment:
+    name: development
+  only:
+    - development
+  script:
+    - pip install awscli
+    - aws s3 sync ./dist s3://starbucks-frontend-development

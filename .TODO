@@ -1,0 +1,20 @@
+Router:
+  ✔ Add names to all routes @started(22-09-27 12:20) @done(22-09-27 12:42) @lasted(22m6s)
+
+Dashboard:
+  ✔ Auto redirect to login page if dashboard is accessed without auth @started(22-09-28 08:59) @done(22-09-28 09:07) @lasted(8m42s)
+
+Portal:
+  ✔ Scroll to top on Portal Change @done(22-09-27 12:48)
+  ✔ Redirect to login page if dashboard is accessed without token @done(22-09-28 10:28)
+
+Fixes:
+  ✔ Sidebar Icon active on nested routes @done(22-09-28 10:28)
+
+Document:
+  ✔ Add documentation to util functions @started(22-09-28 10:29) @done(22-09-28 12:23) @lasted(1h54m10s)
+  ☐ Add documentation to SFCs
+  ✔ Add documentation to stores @started(22-09-28 12:31) @done(22-09-28 14:39) @lasted(2h8m21s)
+
+Refactor:
+  ✔ Extract axios paths in a separate variable in all stores @started(22-09-27 12:50) @done(22-09-27 12:55) @lasted(5m58s)

@@ -1,0 +1,30 @@
+{
+  "css.lint.unknownAtRules": "ignore",
+  "cSpell.words": [
+    "axios",
+    "datatable",
+    "extralight",
+    "fileupload",
+    "inputgroup",
+    "inputtext",
+    "Kilometre",
+    "pinia",
+    "primeicons",
+    "primevue",
+    "rego",
+    "rushstack",
+    "starbuck",
+    "tabview",
+    "tailwindcss",
+    "toastification",
+    "toggleable",
+    "VITE"
+  ],
+  "workbench.colorTheme": "An Old Hope",
+  "editor.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
+  "scss.lint.unknownAtRules": "ignore",
+  "dotenv.enableAutocloaking": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "volar.completion.preferredAttrNameCase": "auto-camel",
+  "volar.completion.preferredTagNameCase": "auto-pascal"
+}

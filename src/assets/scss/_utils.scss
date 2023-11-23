@@ -1,0 +1,17 @@
+.loading {
+  &-faded {
+    @apply opacity-30 pointer-events-none select-none;
+  }
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+}
+.p-dropdown, .p-inputtext {
+  border-radius: 10px;
+}

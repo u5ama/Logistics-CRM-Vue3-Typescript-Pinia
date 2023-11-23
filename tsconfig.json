@@ -1,0 +1,33 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@assets/*": ["./src/assets/*"],
+      "@images": ["./src/assets/images"],
+      "@files": ["./src/assets/file"],
+      "@components/*": ["./src/components/*"],
+      "@hooks": ["./src/hooks"],
+      "@layouts/*": ["./src/components/layouts/*"],
+      "@router/*": ["./src/router/*"],
+      "@router": ["./src/router"],
+      "@stores/*": ["./src/stores/*"],
+      "@app-types/*": ["./src/types/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@views/*": ["./src/views/*"],
+      "@dashboard/*": ["./src/components/dashboard/*"],
+      "@dashboard-views/*": ["./src/components/dashboard/portal/views/*"],
+      "@dashboard-widgets/*": ["./src/components/dashboard/widgets/*"],
+      "primevue/*/sfc": ["primevue/*"],
+      "@/*": ["./src/*"]
+    },
+    "types": ["node"]
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
+}
